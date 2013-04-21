@@ -727,7 +727,7 @@ dmxEnqueue(DevicePtr pDev, int type, int detail, KeySym keySym,
         detail = dmxGetButtonMapping(dmxLocal, detail);
         valuator_mask_zero(&mask);
         QueuePointerEvents(p, type, detail,
-                           POINTER_ABSOLUTE | POINTER_SCREEN, &mask);
+                           POINTER_RELATIVE | POINTER_DESKTOP, &mask);
         return;
 
     case MotionNotify:
